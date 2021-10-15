@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="org.skilli.snaper.repos.structure.ResponseData" />
+    </data>
+
+    <FrameLayout
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop" />
+
+        <FrameLayout
+            android:background="@drawable/grad_bg"
+            android:padding="6dp"
+            android:id="@+id/nic"
+            android:layout_gravity="bottom"
+            app:cardElevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp">
+
+
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginEnd="24dp"
+                android:singleLine="true"
+                android:fontFamily="@font/google_sans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@{data.title}" />
+        </FrameLayout>
+    </FrameLayout>
+</layout>
